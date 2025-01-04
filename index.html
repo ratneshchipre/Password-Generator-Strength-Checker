@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="./assets/pass-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator and Strength Checker</title>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="title">
+
+            <p>Random Password Generator & Strength Checker</p>
+
+        </div>
+
+        <div class="pass-generate">
+
+            <input id="pass-output" type="text" disabled>
+            <i id="copy-pass-btn" class="fa-solid fa-copy"></i>
+            
+        </div>
+
+        <div class="pass-strength">
+            <p></p>
+        </div>
+
+        <div class="pass-length">
+
+            <p>Password Length</p>
+            <span id="range-num">15</span>
+            <br><input id="length-range" type="range" step="1" min="1" max="30" value="15">
+        
+        </div>
+
+        <div class="pass-settings">
+
+            <p>Password Settings</p>
+            <ul class="setting-options">
+
+                <li class="option">
+                    <input id="lowercase" type="checkbox" checked>
+                    <label for="lowercase">Lowercase (a-z)</label>
+                </li>
+                <li class="option">
+                    <input id="uppercase" type="checkbox">
+                    <label for="uppercase">Uppercase (A-Z)</label>
+                </li>
+                <li class="option">
+                    <input id="symbols" type="checkbox">
+                    <label for="symbols">Symbols(!^&*)</label>
+                </li>
+                <li class="option">
+                    <input id="numbers" type="checkbox">
+                    <label for="numbers">Numbers (0-9)</label>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="generate-pass-div">
+
+            <button id="generate-btn">Generate Password</button>
+
+        </div>
+        
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --primary-color: #C0C0C0;
+    --seconadry-color: #EBEBEB;
+    --tertiary-color: #2E4052;
+    --lightshadow: rgba(0,0,0,0.3);
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+.wrapper {
+    width: 30rem;
+    height: auto;
+    background-color: var(--seconadry-color);
+    padding: 1.5rem 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 15px 30px var(--lightshadow);
+}
+
+.title {
+    width: 100%;
+    border-bottom: 2px solid var(--tertiary-color);
+    padding-bottom: 1rem;
+}
+
+.title p {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    color: var(--tertiary-color);
+}
+
+.pass-generate {
+    width: auto;
+    height: auto;
+    margin-top: 1.5rem;
+    display: flex;
+}
+
+.pass-generate input {
+    width: 26rem;
+    padding: 0.8rem 1rem;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    color: var(--tertiary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+}
+
+#copy-pass-btn {
+    position: absolute;
+    font-size: 1.5rem;
+    color: var(--tertiary-color);
+    margin-left: 23.7rem;
+    margin-top: 0.65rem;
+    cursor: pointer;
+}
+
+.pass-strength {
+    width: auto;
+    height: auto;
+    margin: 0.5rem ;
+}
+
+.pass-strength p {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.pass-length {
+    width: auto;
+    height: auto;
+    margin-top: 1.5rem;
+}
+
+.pass-length p {
+    display: inline;
+    font-size: 1.2rem;
+    font-weight: 550;
+    margin-right: 2rem;
+}
+
+#range-num {
+    font-size: 1.2rem;
+    font-weight: 550;
+    margin-left: 11.5rem;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.pass-settings {
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+}
+
+.pass-settings p {
+    font-size: 1.2rem;
+    font-weight: 550;
+    margin-bottom: 0.5rem;
+}
+
+.setting-options {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    list-style: none;
+    row-gap: 0.5rem;
+}
+
+.option {
+    font-size: 1rem;
+    font-weight: 500;
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+
+.option input, .option label {
+    cursor: pointer;
+}
+
+.option input {
+    margin-right: 0.7rem;
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--tertiary-color);
+}
+
+.option:first-child {
+    pointer-events: none;
+}
+
+.generate-pass-div button {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    background-color: var(--tertiary-color);
+    color: #FFFFFF;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.generate-pass-div button:hover {
+    background-color: #1a3046;
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        width: 25rem;
+        margin-top: -2rem;
+    }
+
+    .title p {
+        font-size: 1.4rem;
+    }
+
+    .pass-generate input {
+        padding-right: 3rem;
+    }
+
+    #copy-pass-btn {
+        margin-left: 18.7rem;
+    }
+
+    .pass-length p {
+        font-size: 1.15rem;
+    }
+
+    #range-num {
+        font-size: 1.15rem;
+        margin-left: 7rem;
+    }
+
+    .pass-settings p {
+        font-size: 1.15rem;
+    }
+
+    .option {
+        font-size: 0.95rem;
+    }
+
+    #generate-btn {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .wrapper {
+        width: 20rem;
+        margin-top: -2rem;
+    }
+
+    .title p {
+        font-size: 1.4rem;
+    }
+
+    .pass-generate input {
+        width: 16rem;
+        padding-right: 2.65rem;
+    }
+
+    #copy-pass-btn {
+        margin-top: 0.85rem;
+        font-size: 1.2rem;
+        margin-left: 14.2rem;
+    }
+
+    .pass-length p {
+        font-size: 1.15rem;
+    }
+
+    #range-num {
+        font-size: 1.15rem;
+        margin-left: 2rem;
+    }
+
+    .pass-settings p {
+        margin-top: -0.5rem;
+        font-size: 1.15rem;
+    }
+
+    .setting-options {
+        grid-template-columns: 3fr 3fr;
+        column-gap: 1rem;
+    }
+
+    .option {
+        font-size: 0.95rem;
+    }
+
+    #generate-btn {
+        font-size: 1.05rem;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .wrapper {
+        width: 18rem;
+        margin-top: -2rem;
+    }
+
+    .title p {
+        font-size: 1.3rem;
+    }
+
+    .pass-generate input {
+        width: 14rem;
+        padding-right: 2.5rem;
+    }
+
+    #copy-pass-btn {
+        margin-top: 0.85rem;
+        font-size: 1.2rem;
+        margin-left: 12.2rem;
+    }
+
+    .pass-length p {
+        font-size: 1.05rem;
+    }
+
+    #range-num {
+        font-size: 1.15rem;
+        margin-left: 0.9rem;
+    }
+
+    .pass-settings p {
+        margin-top: -0.5rem;
+        font-size: 1.05rem;
+    }
+
+    .setting-options {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0.5rem;
+    }
+
+    .option {
+        font-size: 0.85rem;
+    }
+
+    .generate-pass-div {
+        width: 100%;
+        padding: 0.8rem;
+    }
+
+    #generate-btn {
+        font-size: 1rem;
+    }
+}
